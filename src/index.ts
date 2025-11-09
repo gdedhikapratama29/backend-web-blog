@@ -1,7 +1,9 @@
 import express from "express";
-import router from "./routes/api"
+import router from "./routes/api";
+import cors from "cors";
 import bodyParser from "body-parser";
 import db from './utils/database';
+import docs from "./docs/route";
 
 async function init () {
     try {
@@ -14,6 +16,10 @@ async function init () {
     const app = express();
     const PORT = 3000;
 
+    app.use(cors());
+
+    app.use(bodyParser.json())
+
       app.get('/', (req, res) => {
         res.status(200).json({
             message: "server is running",
@@ -21,8 +27,9 @@ async function init () {
         })
     })
 
-    app.use(bodyParser.json())
+
     app.use('/api', router)
+    docs(app);
 
   
     app.listen(PORT, () => {
