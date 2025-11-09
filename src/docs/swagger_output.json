@@ -128,7 +128,7 @@
       "LoginRequest": {
         "type": "object",
         "properties": {
-          "indentifier": {
+          "identifier": {
             "type": "string",
             "example": "davidlaid"
           },
