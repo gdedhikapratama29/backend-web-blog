@@ -12,6 +12,7 @@ export interface IUserToken extends Omit<
   | "fullName" 
   | "profilePicture"
   | "username"
+  | "createdAt"
 > {
   id?: Types.ObjectId;
 }

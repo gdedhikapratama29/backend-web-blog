@@ -30,6 +30,16 @@ const doc = {
                 identifier: "davidlaid",
                 password: "12345"
             },
+            RegisterRequest: {
+                fullName: "david laid",
+                username: "davidlaid",
+                email: "davidlaid@yopgmail.com",
+                password: "12345",
+                confirmPassword: "12345"
+            },
+            ActivationRequest: {
+                code: "abcdef"
+            }
         },
     },
 };
